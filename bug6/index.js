@@ -6,16 +6,16 @@
 function renderTransactions(transactions) {
 	var finalHTML = '<div class="buffer">TRANSACTIONS</div>';
 
-	var transactionsHTML = transactions.map(function () {
-		var transactionHTML = `
+	var transactionsHTML = transactions.map(function (transactions) {
+		var transactionsHTML = `
 		<div class="transaction">
-			<div class="name">${transaction.name}</div>
-			<div class="for">${transaction.for}</div>
-			<div class="date">${transaction.date}</div>
-			<div class="amount">${transaction.amount}</div>
+			<div class="name">${transactions.name}</div>
+			<div class="for">${transactions.for}</div>
+			<div class="date">${transactions.date}</div>
+			<div class="amount">${transactions.amount}</div>
 		</div>
 		`
-		return transactionHTML;
+		return transactionsHTML;
 	});
 
 	finalHTML += transactionsHTML.join('');
